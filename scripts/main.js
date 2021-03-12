@@ -1,10 +1,10 @@
 console.log("hello beautiful")
 import { loadLegos, useLegos } from './legos/LegoData.js'
 import { makeLegoList } from './legos/LegoList.js'
-import {Footer} from './Footer.js'
+// import {Footer} from './Footer.js'
 
 const navElement = document.querySelector("nav");
-const footerElement = document.querySelector("footer");
+// const footerElement = document.querySelector("footer");
 
 
 // event listener targeting all the red legos
@@ -31,29 +31,29 @@ navElement.addEventListener("click", (event) => {
 
 // filtering by year//
 
-applicationElement.addEventListener("change", event => {
-	if (event.target.id === "yearSelection") {
-	  const yearAsNumber = parseInt(event.target.value)
-	  console.log(`User wants to see posts since ${yearAsNumber}`)
-	  //invoke a filter function passing the year as an argument
-	  showFilteredYear(yearAsNumber);
-	}
-  })
+// applicationElement.addEventListener("change", event => {
+// 	if (event.target.id === "yearSelection") {
+// 	  const yearAsNumber = parseInt(event.target.value)
+// 	  console.log(`User wants to see posts since ${yearAsNumber}`)
+// 	  //invoke a filter function passing the year as an argument
+// 	  showFilteredYear(yearAsNumber);
+// 	}
+//   })
 
 
 
-const showFilteredYear = (year) => {
-	//get a copy of the lego collection
-	const epoch = Date.parse(`01/01/${year}`);
-	//filter the data
-	const filteredData = useLegos().filter(singleLego => {
-	  if (singleLego.timestamp >= epoch) {
-		return singleLego
-	  }
-	})
-	const legoElement = document.querySelector(".legoList");
-	legoElement.innerHTML = makeLegoList(filteredData);
-  }
+// const showFilteredYear = (year) => {
+// 	//get a copy of the lego collection
+// 	const epoch = Date.parse(`01/01/${year}`);
+// 	//filter the data
+// 	const filteredData = useLegos().filter(singleLego => {
+// 	  if (singleLego.timestamp >= epoch) {
+// 		return singleLego
+// 	  }
+// 	})
+// 	const legoElement = document.querySelector(".legoList");
+// 	legoElement.innerHTML = makeLegoList(filteredData);
+//   }
 
 
 
