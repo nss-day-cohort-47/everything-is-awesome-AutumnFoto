@@ -7,6 +7,7 @@ export const LegoDetail = (brick) => {
               <h3>Name: ${brick.LegoName.toUpperCase()};</h3>
               <div class = "block-notes">${brick.Notes}</div>
               <div class="block-years">Manufactured ${brick.YearFrom} - ${brick.YearTo}</div>
+              </section>
               `;
   const link = brick.ColorstreamLinkImage;
   if (link) {
